@@ -1,0 +1,4 @@
+使用ngork取得模擬網址跟line webhook做連結
+再進行api.py linebot.py程式運行即可模擬查看用戶訊息與更新用戶貨物資訊
+會有三個程式同時運行linebot運行後再進行 ngrok https5002才監聽的到
+如何運作三個程式用不同分頁 看 screen教學

@@ -1,0 +1,17 @@
+sudo snap install ngrok
+
+https://dashboard.ngrok.com/signup 註冊
+獲取 authtoken：
+登入 ngrok 儀表板
+前往 https://dashboard.ngrok.com/get-started/your-authtoken
+複製您的 authtoken（看起來像：2RvM1Vxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx）
+設定 authtoken：
+ngrok config add-authtoken 你的authtoken
+運行
+ngrok http 5002
+複製Forwarding的網址 加上"/callback "
+你的ngrok網址/callback
+每次重新啟動 ngrok 時，URL 都會改變，需要重新設定
+
+利用  screen  同時啟動三個伺服器
+

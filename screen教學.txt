@@ -1,0 +1,28 @@
+# 安裝 screen
+sudo apt-get install screen
+
+# 創建並進入第一個 screen 會話（運行 api.py）
+screen -S api
+python api.py
+# 按 Ctrl+A 然後按 D 來分離這個會話
+
+# 創建並進入第二個 screen 會話（運行 Linebot.py）
+screen -S linebot
+python Linebot.py
+# 按 Ctrl+A 然後按 D 來分離這個會話
+
+# 創建並進入第三個 screen 會話（運行 ngrok）
+screen -S ngrok
+ngrok http 5002
+# 按 Ctrl+A 然後按 D 來分離這個會話
+
+# 查看所有 screen 會話
+screen -ls
+
+# 重新連接到特定會話
+screen -r api     # 連接到 api 會話
+screen -r linebot # 連接到 linebot 會話
+screen -r ngrok   # 連接到 ngrok 會話
+
+#停止所有 screen 會話
+killall screen 

@@ -1,0 +1,5 @@
+mysql -u root -p
+CREATE USER 'root'@'%' IDENTIFIED BY '123';
+GRANT ALL PRIVILEGES ON *.* TO 'root'@'%' WITH GRANT OPTION;
+FLUSH PRIVILEGES;
+sudo mysql -uroot -p123 < init.sql
